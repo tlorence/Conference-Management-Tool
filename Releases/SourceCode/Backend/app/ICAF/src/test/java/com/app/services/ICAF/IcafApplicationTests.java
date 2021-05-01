@@ -1,4 +1,4 @@
-package com.backend.app;
+package com.app.services.ICAF;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

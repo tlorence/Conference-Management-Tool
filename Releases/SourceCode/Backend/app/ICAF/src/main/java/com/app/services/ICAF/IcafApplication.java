@@ -1,4 +1,4 @@
-package com.backend.app;
+package com.app.services.ICAF;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
