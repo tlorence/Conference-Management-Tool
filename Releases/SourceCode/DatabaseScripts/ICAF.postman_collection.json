@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "fb056e08-bfdb-4c62-a501-0ca908deada2",
+		"name": "ICAF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pamu@gmail.com\",\r\n    \"name\": \"Pamuditha Rasanjana\",\r\n    \"password\": \"123\",\r\n    \"role\": \"Researcher\",\r\n    \"docPath\": \"\",\r\n    \"eduQualification\": \"Msc in Computer and Network Engineering\",\r\n    \"expertiseArea\": \"Computer and Network Engineering\",\r\n    \"PaymentStatus\": \"Paid\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9900/users/addUser",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"users",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addConference",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"conferenceName\": \"International Conference for Application Frameworks\",\r\n    \"date\": \"22/06/2021\",\r\n    \"venue\": \"SLIIT\",\r\n    \"aboutConference\": \"The first International Conference on application frameworks in 2021(ICAF2021) is organized by the Sri Lanka Institute of Information Technology\",\r\n    \"keynote_speakers\": [\r\n        \"Teron Lorence\",\r\n        \"Pamuditha Rasanjana\",\r\n        \"Himantha Amarathunga\"\r\n    ],\r\n    \"guestSpeaker\": \"Vishwa Perera\",\r\n    \"conferenceTracks\": [\r\n        \"conf_id\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9900/conferences/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"conferences",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllconferences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9900/conferences/getAllConferences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"conferences",
+						"getAllConferences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9900/conferences/findConferenceById/60d6b5ddcb26b922c3ef93bd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"conferences",
+						"findConferenceById",
+						"60d6b5ddcb26b922c3ef93bd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteConference",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
