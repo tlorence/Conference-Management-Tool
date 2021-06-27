@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+
 export default class Navbar extends Component {
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-lg  ps-5">
         <a className="navbar-brand" href="#">
-          LOGO
+          <img src="./img/logo.png" alt=""  className="logo"/>
         </a>
 
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -15,28 +16,35 @@ export default class Navbar extends Component {
             <li className="nav-item m-3 active">
               <Link to="/">
                 <a className="nav-link" href="#">
-                  ITEM
+                  HOME
                 </a>
               </Link>
             </li>
             <li className="nav-item m-3">
               <Link to="/">
                 <a className="nav-link" href="#">
-                ITEM
+                WORKSHOPS
                 </a>
               </Link>
             </li>
             <li className="nav-item m-3">
               <Link to="/">
                 <a className="nav-link" href="#">
-                ITEM
+                REGISTRATION
                 </a>
               </Link>
             </li>
             <li className="nav-item m-3">
               <Link to="/">
                 <a className="nav-link" href="#">
-                ITEM
+                PROGRAMS
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item m-3">
+              <Link to="/">
+                <a className="nav-link" href="#">
+                CONTACT US
                 </a>
               </Link>
             </li>
