@@ -9,8 +9,8 @@ function App() {
     <BrowserRouter>
     {/* <Navbar/> */}
       <Switch>
-        <Route>
-          <Sidebar />
+        <Route path="/admin">
+          <AdminDashboard />
         </Route>
       </Switch>
     </BrowserRouter>

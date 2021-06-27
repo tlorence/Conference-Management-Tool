@@ -11,3 +11,11 @@ li a FontAwesomeIcon {
     color: #ffff;
     font-size: 55px;
 }
+
+li a {
+    text-decoration: none;
+}
+
+.sidebar-align {
+    position: absolute;
+}

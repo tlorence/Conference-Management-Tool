@@ -1,145 +1,108 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { faHome} from "@fortawesome/free-solid-svg-icons";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import "./Sidebar.css"
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faTachometerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faUserCog } from "@fortawesome/free-solid-svg-icons";
+import { faHandshake } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
+import "./Sidebar.css";
+import { Link } from "react-router-dom";
+import AdminDashboard from "../../AdminDashboard/AdminDashboard";
+import { imagePath } from "../../../services";
+
 export default function Sidebar() {
   return (
     <div>
       <div class="container-fluid">
         <div class="row flex-nowrap">
-          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark sidebar-align">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
               <a
                 href="/"
                 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
               >
-                {/* <span class="fs-5 d-none d-sm-inline">Menu</span> */}
-                <img src="./img/logo.png" alt="" className="w-50 logo-white"/>
+                <img
+                  src={`${imagePath}logo.png`}
+                  alt=""
+                  className="ms-5 w-50 logo-white"
+                />
               </a>
               <ul
                 class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start mt-3"
                 id="menu"
               >
-                <li class="nav-item">
+                <li class="nav-item mt-3">
+                  <a href="#" class="nav-link align-middle px-0">
+                    <Link to="/admin/dashboard">
+                      <i class="fs-4 bi-house"></i>{" "}
+                      <FontAwesomeIcon
+                        icon={faTachometerAlt}
+                        color="white"
+                        className="me-3"
+                        size="2x"
+                      />
+                      <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                    </Link>
+                  </a>
+                </li>
+
+                <li class="nav-item mt-3">
+                  <a href="#" class="nav-link align-middle px-0">
+                    <Link to="/admin/reserchPapers">
+                      <i class="fs-4 bi-house"></i>{" "}
+                      <FontAwesomeIcon
+                        icon={faSearch}
+                        color="white"
+                        className="me-3"
+                        size="2x"
+                      />
+                      <span class="ms-1 d-none d-sm-inline">
+                        Research Paper
+                      </span>
+                    </Link>
+                  </a>
+                </li>
+
+                <li class="nav-item mt-3">
                   <a href="#" class="nav-link align-middle px-0">
                     <i class="fs-4 bi-house"></i>{" "}
                     <FontAwesomeIcon
-                    icon={faHome}
-                    color="white"
-                    className="me-3"
-                    size="2x"
-                  />
-                    <span class="ms-1 d-none d-sm-inline">Home</span>
+                      icon={faUserCog}
+                      color="white"
+                      className="me-3"
+                      size="2x"
+                    />
+                    <span class="ms-1 d-none d-sm-inline">Workshops</span>
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#submenu1"
-                    data-bs-toggle="collapse"
-                    class="nav-link px-0 align-middle"
-                  >
-                    <i class="fs-4 bi-speedometer2"></i>{" "}
-                    <span class="ms-1 d-none d-sm-inline">Dashboard</span>{" "}
-                  </a>
-                  <ul
-                    class="collapse show nav flex-column ms-1"
-                    id="submenu1"
-                    data-bs-parent="#menu"
-                  >
-                    <li class="w-100">
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Item</span> 1{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Item</span> 2{" "}
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-table"></i>{" "}
-                    <span class="ms-1 d-none d-sm-inline">Orders</span>
+
+                <li class="nav-item mt-3">
+                  <a href="#" class="nav-link align-middle px-0">
+                    <i class="fs-4 bi-house"></i>{" "}
+                    <FontAwesomeIcon
+                      icon={faCalendarPlus}
+                      color="white"
+                      className="me-3"
+                      size="2x"
+                    />
+                    <span class="ms-1 d-none d-sm-inline">
+                      Create Conference
+                    </span>
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#submenu2"
-                    data-bs-toggle="collapse"
-                    class="nav-link px-0 align-middle "
-                  >
-                    <i class="fs-4 bi-bootstrap"></i>{" "}
-                    <span class="ms-1 d-none d-sm-inline">Bootstrap</span>
-                  </a>
-                  <ul
-                    class="collapse nav flex-column ms-1"
-                    id="submenu2"
-                    data-bs-parent="#menu"
-                  >
-                    <li class="w-100">
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Item</span> 1
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Item</span> 2
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a
-                    href="#submenu3"
-                    data-bs-toggle="collapse"
-                    class="nav-link px-0 align-middle"
-                  >
-                    <i class="fs-4 bi-grid"></i>{" "}
-                    <span class="ms-1 d-none d-sm-inline">Products</span>{" "}
-                  </a>
-                  <ul
-                    class="collapse nav flex-column ms-1"
-                    id="submenu3"
-                    data-bs-parent="#menu"
-                  >
-                    <li class="w-100">
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Product</span> 1
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Product</span> 2
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Product</span> 3
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        {" "}
-                        <span class="d-none d-sm-inline">Product</span> 4
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-people"></i>{" "}
-                    <span class="ms-1 d-none d-sm-inline">Customers</span>{" "}
+
+                <li class="nav-item mt-3">
+                  <a href="#" class="nav-link align-middle px-0">
+                    <i class="fs-4 bi-house"></i>{" "}
+                    <FontAwesomeIcon
+                      icon={faHandshake}
+                      color="white"
+                      className="me-3"
+                      size="2x"
+                    />
+                    <span class="ms-1 d-none d-sm-inline">
+                      Conference Details
+                    </span>
                   </a>
                 </li>
               </ul>
@@ -159,7 +122,7 @@ export default function Sidebar() {
                     height="30"
                     class="rounded-circle"
                   />
-                  <span class="d-none d-sm-inline mx-1">loser</span>
+                  <span class="d-none d-sm-inline mx-1">User</span>
                 </a>
                 <ul
                   class="dropdown-menu dropdown-menu-dark text-small shadow"
@@ -191,20 +154,6 @@ export default function Sidebar() {
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="col py-3">
-            <h3>Left Sidebar with Submenus</h3>
-            <p class="lead">
-              An example 2-level sidebar with collasible menu items. The menu
-              functions like an "accordion" where only a single menu is be open
-              at a time.
-            </p>
-            <ul class="list-unstyled">
-              <li>
-                <h5>Responsive</h5> shrinks in width, hides text labels and
-                collapses to icons only on mobile
-              </li>
-            </ul>
           </div>
         </div>
       </div>
