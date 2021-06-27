@@ -32,8 +32,8 @@ export default function Sidebar() {
                 id="menu"
               >
                 <li class="nav-item mt-3">
-                  <a href="#" class="nav-link align-middle px-0">
-                    <Link to="/admin/dashboard">
+                  <a href="" class="nav-link align-middle px-0">
+                    <Link to="/admin">
                       <i class="fs-4 bi-house"></i>{" "}
                       <FontAwesomeIcon
                         icon={faTachometerAlt}
@@ -47,7 +47,7 @@ export default function Sidebar() {
                 </li>
 
                 <li class="nav-item mt-3">
-                  <a href="#" class="nav-link align-middle px-0">
+                  <a href="" class="nav-link align-middle px-0">
                     <Link to="/admin/reserchPapers">
                       <i class="fs-4 bi-house"></i>{" "}
                       <FontAwesomeIcon
@@ -64,7 +64,8 @@ export default function Sidebar() {
                 </li>
 
                 <li class="nav-item mt-3">
-                  <a href="#" class="nav-link align-middle px-0">
+                  <a href="" class="nav-link align-middle px-0">
+                  <Link to="/admin/workShops">
                     <i class="fs-4 bi-house"></i>{" "}
                     <FontAwesomeIcon
                       icon={faUserCog}
@@ -73,11 +74,13 @@ export default function Sidebar() {
                       size="2x"
                     />
                     <span class="ms-1 d-none d-sm-inline">Workshops</span>
+                    </Link>
                   </a>
                 </li>
 
                 <li class="nav-item mt-3">
-                  <a href="#" class="nav-link align-middle px-0">
+                  <a href="" class="nav-link align-middle px-0">
+                  <Link to="/admin/createConference">
                     <i class="fs-4 bi-house"></i>{" "}
                     <FontAwesomeIcon
                       icon={faCalendarPlus}
@@ -88,11 +91,13 @@ export default function Sidebar() {
                     <span class="ms-1 d-none d-sm-inline">
                       Create Conference
                     </span>
+                    </Link>
                   </a>
                 </li>
 
                 <li class="nav-item mt-3">
-                  <a href="#" class="nav-link align-middle px-0">
+                  <a href="" class="nav-link align-middle px-0">
+                  <Link to="/admin/conferenceDetails">
                     <i class="fs-4 bi-house"></i>{" "}
                     <FontAwesomeIcon
                       icon={faHandshake}
@@ -103,13 +108,14 @@ export default function Sidebar() {
                     <span class="ms-1 d-none d-sm-inline">
                       Conference Details
                     </span>
+                    </Link>
                   </a>
                 </li>
               </ul>
               <hr />
               <div class="dropdown pb-4">
                 <a
-                  href="#"
+                  href=""
                   class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                   id="dropdownUser1"
                   data-bs-toggle="dropdown"
@@ -129,17 +135,17 @@ export default function Sidebar() {
                   aria-labelledby="dropdownUser1"
                 >
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="">
                       New project...
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="">
                       Settings
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="">
                       Profile
                     </a>
                   </li>
@@ -147,7 +153,7 @@ export default function Sidebar() {
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="">
                       Sign out
                     </a>
                   </li>
