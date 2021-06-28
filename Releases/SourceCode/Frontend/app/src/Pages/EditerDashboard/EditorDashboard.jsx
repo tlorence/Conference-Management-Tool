@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, BrowserRouter, Route } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar";
-import "./AdminDashboard.css";
+
 import ResearchPaper from "../ResearchPapers/ResearchPapers";
 import WorkShops from "../Workshops/Workshop";
 import CreateConference from "../CreateConference/CreateConference";
@@ -12,13 +12,12 @@ import { faTachometerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faUserCog } from "@fortawesome/free-solid-svg-icons";
 import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
-
-export default class AdminDashboard extends Component {
+export default class EditorDashboard extends Component {
   state = {
-    adminSideItems: [
+    editorSideItems: [
       {
         name: "Dashboard",
-        path: "/admin",
+        path: "/editor",
         icon: (
           <FontAwesomeIcon
             icon={faTachometerAlt}
@@ -28,30 +27,7 @@ export default class AdminDashboard extends Component {
           />
         ),
       },
-      {
-        name: "Research Paper",
-        path: "/admin/reserchPapers",
-        icon: (
-          <FontAwesomeIcon
-            icon={faSearch}
-            color="white"
-            className="me-3"
-            size="2x"
-          />
-        ),
-      },
-      {
-        name: "Workshops",
-        path: "/admin/workShops",
-        icon: (
-          <FontAwesomeIcon
-            icon={faUserCog}
-            color="white"
-            className="me-3"
-            size="2x"
-          />
-        ),
-      },
+
       {
         name: "Create Conference",
         path: "/editor/createConference",
@@ -66,7 +42,7 @@ export default class AdminDashboard extends Component {
       },
       {
         name: "Conference Details",
-        path: "/admin/conferenceDetails",
+        path: "/editor/conferenceDetails",
         icon: (
           <FontAwesomeIcon
             icon={faHandshake}
@@ -81,22 +57,16 @@ export default class AdminDashboard extends Component {
   render() {
     return (
       <div>
-        <Sidebar items={this.state.adminSideItems} />
+        <Sidebar items={this.state.editorSideItems} />
         <div className="body-align">
           <Switch>
-            <Route path="/admin/createConference">
+            <Route path="/editor/createConference">
               <CreateConference />
-            </Route>
-            <Route path="/admin/workShops">
-              <WorkShops />
-            </Route>
-            <Route path="/admin/reserchPapers">
-              <ResearchPaper />
-            </Route>
-            <Route path="/admin/conferenceDetails">
+              </Route>
+              <Route path="/editor/conferenceDetails">
               {/* udin class eka import karala methanata tag eka dpn */}
             </Route>
-            <Route path="/admin/">
+            <Route path="/editor/">
               <h1>Dashboard App</h1>
             </Route>
           </Switch>
