@@ -28,8 +28,16 @@ export default function Sidebar(props) {
                   <li class="nav-item mt-3">
                     <a href="" class="nav-link align-middle px-0">
                       <Link to={item.path}>
-                        {item.icon}
-                        <span class="ms-1 d-none d-sm-inline">{item.name}</span>
+                        <div className="row">
+                          <div className="col-lg-3 text-start pe-3">
+                            {item.icon}
+                          </div>
+                          <div className="col-lg-9 text-start">
+                            <span class="ms-1 d-none d-sm-inline ">
+                              {item.name}
+                            </span>
+                          </div>{" "}
+                        </div>
                       </Link>
                     </a>
                   </li>
