@@ -8,54 +8,56 @@ import ReviewerDashboard from "./Pages/ReviewerDashboard/ReviewerDashboard";
 import ResearcherDashboard from "./Pages/ResearcherDashboard/ResearcherDashboard";
 import WorkshopPresenterDashboard from "./Pages/WorkshopPresenterDashboard/WorkshopPresenterDashboard";
 import Registration from "./Pages/Resregistration/Registration";
+import Login from "./Pages/Login/Login";
 
 function App() {
-    return ( <
-        BrowserRouter > { /* <Navbar/> */ } <
+    return (
+
+        <
+        BrowserRouter >
+        <
         Switch >
         <
         Route path = "/admin" >
         <
         AdminDashboard / >
         <
-        /Route>
-
-        <
+        /Route> <
         Route path = "/editor" >
         <
         EditorDashboard / >
         <
-        /Route>
-
-        <
+        /Route> <
         Route path = "/reviewer" >
         <
         ReviewerDashboard / >
         <
-        /Route>
-
-        <
+        /Route> <
         Route path = "/researcher" >
         <
         ResearcherDashboard / >
         <
-        /Route>
-
-        <
+        /Route> <
         Route path = "/workshopPresenter" >
         <
         WorkshopPresenterDashboard / >
         <
-        /Route>
-
+        /Route> <
+        div >
+        <
+        Navbar / >
         <
         Route path = "/registration" >
         <
         Registration / >
         <
-        /Route>
-
+        /Route> <
+        Route path = "/login" >
         <
+        Login / >
+        <
+        /Route> <
+        /div> <
         /Switch> <
         /BrowserRouter>
     );
