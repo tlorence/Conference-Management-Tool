@@ -10,17 +10,17 @@ public class User {
     private String name;
     private String password;
     private String role;
-    private String docPath;
+    private String file;
     private String eduQualification;
     private String expertiseArea;
     private String paymentStatus;
 
-    public User(String email, String name, String password, String role, String docPath, String eduQualification, String expertiseArea, String paymentStatus) {
+    public User(String email, String name, String password, String role, String file, String eduQualification, String expertiseArea, String paymentStatus) {
         this.email = email;
         this.name = name;
         this.password = password;
         this.role = role;
-        this.docPath = docPath;
+        this.file = file;
         this.eduQualification = eduQualification;
         this.expertiseArea = expertiseArea;
         this.paymentStatus = paymentStatus;
@@ -58,12 +58,12 @@ public class User {
         this.role = role;
     }
 
-    public String getDocPath() {
-        return docPath;
+    public String getFile() {
+        return file;
     }
 
-    public void setDocPath(String docPath) {
-        this.docPath = docPath;
+    public void setFile(String docPath) {
+        this.file = docPath;
     }
 
     public String getEduQualification() {
