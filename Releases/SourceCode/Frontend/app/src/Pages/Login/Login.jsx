@@ -28,7 +28,6 @@ class Login extends Component {
                             <div>
                                 <label className="labelLogin">Email</label>
                             </div>
-
                             <div className="formField">
                                 <input
                                     className="loginText"

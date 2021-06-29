@@ -20,12 +20,11 @@ class PaymentMethod extends Component {
                     <h3>Payment</h3>
                     <div className="containerPayment">
                     <form onSubmit={this.handleChange}>
-                                <label className="labelPayment">Accepted Cards</label>
                                 <div className="icon-container">
-                                    <i className="fa fa-cc-visa" id="visa"></i>&nbsp;
-                                    <i className="fa fa-cc-amex" id="amex"></i>&nbsp;
-                                    <i className="fa fa-cc-mastercard" id="mastercard"></i>&nbsp;
-                                    <i className="fa fa-cc-discover" id="discover"></i>
+                                    <i className="fab fa-cc-visa" id="visa"></i>&nbsp;
+                                    <i className="fab fa-cc-amex" id="amex"></i>&nbsp;
+                                    <i className="fab fa-cc-mastercard" id="mastercard"></i>&nbsp;
+                                    <i className="fab fa-cc-discover" id="discover"></i>
                                 </div>
                                 <label className="labelPayment">Name on Card *</label>
                                 <input
