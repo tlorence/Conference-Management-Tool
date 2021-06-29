@@ -19,10 +19,10 @@ const components = {
   DropdownIndicator: null,
 };
 
-// const createOption = (label: string) => ({
-//   label,
-//   value: label,
-// });
+const createOption = (label: string) => ({
+  label,
+  value: label,
+});
 
 export default class CreateConference extends Component {
   constructor(props) {
@@ -61,14 +61,14 @@ export default class CreateConference extends Component {
       });
   }
 
-  handleChange = (value: any, actionMeta: any) => {
+  handleChange = (value, actionMeta) => {
     console.group("Value Changed");
     console.log(value);
-    console.log(`action: ${actionMeta.action}`);
+    //console.log(`action: ${actionMeta.action}`);
     console.groupEnd();
     this.setState({ value });
   };
-  handleInputChange = (inputValue: string) => {
+  handleInputChange = (inputValue) => {
     this.setState({ inputValue });
   };
   handleKeyDown = (e) => {
