@@ -21,15 +21,15 @@ import Login from "./Pages/Login/Login";
 import PaymentMethod from "./Pages/Payment/PaymentMethod";
 
 
-function App() {
-
-    return (
-
-        <BrowserRouter>
+// function App() {
+//
+//     return (
+//
+//         <BrowserRouter>
 
             {/*<Login/>*/}
 
-            <PaymentMethod/>
+            // <PaymentMethod/>
 
             {/*<Switch>*/}
 
@@ -96,11 +96,51 @@ function App() {
 
             {/*</Switch>*/}
 
-        </BrowserRouter>
+//         </BrowserRouter>
+//
+//     );
+//
+// }
 
-    );
 
+// export default App;
+
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/admin">
+          <AdminDashboard />
+        </Route>{" "}
+        <Route path="/editor">
+          <EditorDashboard />
+        </Route>{" "}
+        <Route path="/reviewer">
+          <ReviewerDashboard />
+        </Route>{" "}
+        <Route path="/researcher">
+          <ResearcherDashboard />
+        </Route>{" "}
+        <Route path="/workshopPresenter">
+          <WorkshopPresenterDashboard />
+        </Route>{" "}
+        <div>
+          <Navbar />
+          <Route path="/registration">
+            <Registration />
+          </Route>{" "}
+          <Route path="/login">
+            <Login />
+          </Route>{" "}
+          <Route path={"/paymentMethod"}>
+            <PaymentMethod/>
+          </Route>{" "}
+        </div>{" "}
+      </Switch>{" "}
+    </BrowserRouter>
+  );
 }
 
-
 export default App;
+
