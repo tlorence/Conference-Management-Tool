@@ -11,9 +11,12 @@ import { faTachometerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faUserCog } from "@fortawesome/free-solid-svg-icons";
 import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
+import { getAllConferernce } from "../../services/conference";
 
 export default class AdminDashboard extends Component {
   state = {
+    researchPapers: [],
+    conferenceDetails: [],
     adminSideItems: [
       {
         name: "Dashboard",
@@ -77,6 +80,10 @@ export default class AdminDashboard extends Component {
       },
     ],
   };
+  async componentDidMount() {
+    const res = await getAllConferernce();
+    this.setState({ conferenceDetails: res.data });
+  }
   render() {
     return (
       <div>

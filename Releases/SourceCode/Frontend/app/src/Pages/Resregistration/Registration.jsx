@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { addUser } from "../../services/user";
 import "./Registration.css";
 
 export default class Registration extends Component {
@@ -10,28 +11,34 @@ export default class Registration extends Component {
     file: "",
     eduQualification: "",
     expertiseArea: "",
-    PaymentStatus: "not paid",
   };
-  componentDidMount() {}
+  onSubmit = async () => {
+    try {
+      debugger;
+      const res = await addUser(this.state);
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-
-  fileHandler = (e) => {
+  fileHandler = async (e) => {
     const reader = new FileReader();
-    reader.onload = () => {
+    reader.onload = (e) => {
       if (reader.readyState === 2) {
         this.setState({ file: reader.result });
       }
     };
     reader.readAsDataURL(e.target.files[0]);
-    console.log(this.state.file);
+    // setTimeout(() => {
+    //   console.log(this.state.file);
+    // }, 2000);
   };
-
 
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(e.target.value);
   };
-  
+
   roleUpdate = (e) => {
     console.log();
     var role = document.getElementById("role").value;
@@ -44,13 +51,14 @@ export default class Registration extends Component {
     } else if (role == "workshopConductor") {
       div.style.display = "block";
     }
+    this.onChange(e);
   };
   render() {
     return (
       <div>
         <h1 className="p-5 text-center">Registration</h1>
         <div className=" container w-50 form-border">
-          <form>
+          <form onSubmit={this.onSubmit}>
             <div class="mb-3">
               <label for="name" class="form-label">
                 Name
@@ -117,7 +125,7 @@ export default class Registration extends Component {
                   name="file"
                   class="form-control"
                   placeholder=""
-                  accept=".pdf,.doc,docx"
+                  accept=".pdf,.doc,.docx"
                   onChange={this.fileHandler}
                 />
               </div>

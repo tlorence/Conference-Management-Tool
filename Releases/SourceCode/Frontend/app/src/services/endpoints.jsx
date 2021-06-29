@@ -1,2 +1,2 @@
-export const USER = "/user/";
-export const CONFERENCE = "/conferences/";
+export const USER = "users/";
+export const CONFERENCE = "conferences/";
