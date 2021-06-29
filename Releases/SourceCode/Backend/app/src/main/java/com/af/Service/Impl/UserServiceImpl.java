@@ -1,6 +1,7 @@
 package com.af.Service.Impl;
 
 import com.af.Dao.ResearchPapersDao;
+import com.af.Dao.WorkShopProposalDao;
 import com.af.Model.User;
 import com.af.Repositories.UserRepository;
 import com.af.Service.UserService;
@@ -28,20 +29,32 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll();
     }
 
-    //    ResearchPapersDao researchPapersDao;
     @Override
     public List researchPapers() {
         List<User> allUsers = userRepository.findAll();
         List<ResearchPapersDao> papers = new ArrayList<>();
 
         for (User allUser : allUsers) {
-            if (allUser.getRole().equals("researcher")) {
+            if (allUser.getRole().equals("researcher") && allUser.getApproval().equals("Pending")) {
                 ResearchPapersDao researchPapersDao = new ResearchPapersDao(allUser.getEmail(), allUser.getName(), allUser.getFile());
-
                 papers.add(researchPapersDao);
             }
         }
         return papers;
+    }
+
+    @Override
+    public List workshopProposals() {
+        List<User> allUsers = userRepository.findAll();
+        List<WorkShopProposalDao> proposals = new ArrayList<>();
+
+        for (User allUser : allUsers) {
+            if (allUser.getRole().equals("workshopConductor") && allUser.getApproval().equals("Pending")) {
+                WorkShopProposalDao workShopProposalDao = new WorkShopProposalDao(allUser.getEmail(), allUser.getName(), allUser.getFile());
+                proposals.add(workShopProposalDao);
+            }
+        }
+        return proposals;
     }
 
 

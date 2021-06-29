@@ -28,4 +28,7 @@ public class UserController {
 
     @GetMapping("/getPapers")
     public List getPapers(){ return userService.researchPapers();}
+
+    @GetMapping("/getProposals")
+    public List getProposals(){ return userService.workshopProposals();}
 }

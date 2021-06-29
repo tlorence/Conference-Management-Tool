@@ -16,4 +16,6 @@ public interface UserService {
 
     List researchPapers();
 
+    List workshopProposals();
+
 }

@@ -14,8 +14,9 @@ public class User {
     private String eduQualification;
     private String expertiseArea;
     private String paymentStatus;
+    private String approval;
 
-    public User(String email, String name, String password, String role, String file, String eduQualification, String expertiseArea, String paymentStatus) {
+    public User(String email, String name, String password, String role, String file, String eduQualification, String expertiseArea, String paymentStatus, String approval) {
         this.email = email;
         this.name = name;
         this.password = password;
@@ -23,8 +24,13 @@ public class User {
         this.file = file;
         this.eduQualification = eduQualification;
         this.expertiseArea = expertiseArea;
-        this.paymentStatus = paymentStatus;
+        this.paymentStatus = "Pending";
+        this.approval = approval;
     }
+
+    public String getApproval() { return approval; }
+
+    public void setApproval(String approval) { this.approval = approval; }
 
     public String getEmail() {
         return email;
