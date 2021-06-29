@@ -3,7 +3,7 @@ package com.af.Model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "templates")
+@Document(collection = "fileUploads")
 public class FileUpload {
     @Id
     private String fileName;

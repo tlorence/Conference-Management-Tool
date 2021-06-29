@@ -1,5 +1,6 @@
 package com.af.Service;
 
+import com.af.Dao.ResearchPapersDao;
 import com.af.Model.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,4 +13,7 @@ public interface UserService {
     User addUser(User user);
 
     List<User> getAll();
+
+    List researchPapers();
+
 }

@@ -17,8 +17,9 @@ public class Conference {
     private String[] keynote_speakers;
     private String guestSpeaker;
     private String[] conferenceTracks;
+    private String approvalStatus;
 
-    public Conference(String conferenceId, String conferenceName, String date, String venue, String aboutConference, String[] keynote_speakers, String guestSpeaker, String[] conferenceTracks) {
+    public Conference(String conferenceId, String conferenceName, String date, String venue, String aboutConference, String[] keynote_speakers, String guestSpeaker, String[] conferenceTracks, String approvalStatus) {
         this.conferenceId = conferenceId;
         this.conferenceName = conferenceName;
         this.date = date;
@@ -27,6 +28,15 @@ public class Conference {
         this.keynote_speakers = keynote_speakers;
         this.guestSpeaker = guestSpeaker;
         this.conferenceTracks = conferenceTracks;
+        this.approvalStatus = "Pending";
+    }
+
+    public String getApprovalStatus() {
+        return approvalStatus;
+    }
+
+    public void setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
     }
 
     public String getConferenceId() {
