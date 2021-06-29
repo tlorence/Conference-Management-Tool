@@ -1,0 +1,6 @@
+.form-border {
+  border: solid 1px #00a2e2;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(160, 202, 242, 0.1);
+}
