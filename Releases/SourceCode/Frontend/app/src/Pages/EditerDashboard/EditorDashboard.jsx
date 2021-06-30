@@ -5,7 +5,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import ResearchPaper from "../ResearchPapers/ResearchPapers";
 import WorkShops from "../Workshops/Workshop";
 import CreateConference from "../CreateConference/CreateConference";
-
+import ConferenceDetails from "../Conference/Conference";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faTachometerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -62,9 +62,9 @@ export default class EditorDashboard extends Component {
           <Switch>
             <Route path="/editor/createConference">
               <CreateConference />
-              </Route>
-              <Route path="/editor/conferenceDetails">
-              {/* udin class eka import karala methanata tag eka dpn */}
+            </Route>
+            <Route path="/editor/conferenceDetails">
+              <ConferenceDetails />
             </Route>
             <Route path="/editor/">
               <h1>Dashboard App</h1>

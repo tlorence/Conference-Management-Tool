@@ -4,6 +4,7 @@ import { Switch, BrowserRouter, Route } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar";
 import ResearchPaper from "../ResearchPapers/ResearchPapers";
 import WorkShops from "../Workshops/Workshop";
+import ConferenceApproval from "../ConferenceApproval/ConferenceApproval";
 import CreateConference from "../CreateConference/CreateConference";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -100,7 +101,7 @@ export default class AdminDashboard extends Component {
               <ResearchPaper />
             </Route>
             <Route path="/admin/conferenceDetails">
-              {/* udin class eka import karala methanata tag eka dpn */}
+              <ConferenceApproval />
             </Route>
             <Route path="/admin/">
               <h1>Dashboard App</h1>
