@@ -33,6 +33,11 @@ public class ConferenceServiceImpl implements ConferenceService {
     }
 
     @Override
+    public Conference updateConference(Conference conference) {
+        return conferenceRepository.save(conference);
+    }
+
+    @Override
     public String deleteConference(String id) {
 
         conferenceRepository.deleteById(id);
