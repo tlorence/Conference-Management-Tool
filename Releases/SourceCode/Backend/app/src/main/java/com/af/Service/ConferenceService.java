@@ -16,4 +16,5 @@ public interface ConferenceService {
     List<Conference> getAllConf();
     Optional<Conference> getConferenceById(String id);
     String deleteConference(String id);
+    Conference updateConference(Conference conference);
 }

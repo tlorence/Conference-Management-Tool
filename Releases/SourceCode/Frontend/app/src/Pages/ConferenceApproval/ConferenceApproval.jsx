@@ -1,6 +1,6 @@
-import React, { Component } from "react";
 import axios from "axios";
-import "./Conference.css";
+import React, { Component } from "react";
+import "./ConferenceApproval.css";
 
 const initialState = {
   conferences: [],
@@ -15,7 +15,8 @@ const initialState = {
   inputValue: "",
   value: [],
 };
-export default class Conference extends Component {
+
+export default class ConferenceApproval extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
@@ -40,7 +41,7 @@ export default class Conference extends Component {
     return (
       <div className="container-fluid">
         <div>
-          <h1>Conference Details</h1>
+          <h1>Conference Approval</h1>
           <div className="form-border">
             <div className="col s6">
               <table className="table table-success table-striped" id="table1">
@@ -53,6 +54,9 @@ export default class Conference extends Component {
                     <th>About Conference</th>
                     <th>Keynote Speakers</th>
                     <th>Guest Speaker</th>
+                    <th>Approve</th>
+                    <th>Reject</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -65,6 +69,30 @@ export default class Conference extends Component {
                       <td>{conference.aboutConference}</td>
                       <td>{conference.keynote_speakers}</td>
                       <td>{conference.guestSpeaker}</td>
+                      <td>
+                        <button
+                          onClick={(e) => this.edit(conference.conferenceId)}
+                          className="btn waves-effect waves-light right"
+                        >
+                          <i class="fas fa-check"></i>
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          onClick={(e) => this.delete(conference.conferenceId)}
+                          className="btn waves-effect waves-light right"
+                        >
+                          <i class="fas fa-times-circle"></i>
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          onClick={(e) => this.delete(conference.conferenceId)}
+                          className="btn waves-effect waves-light right"
+                        >
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>

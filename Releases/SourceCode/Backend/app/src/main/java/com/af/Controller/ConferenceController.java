@@ -30,7 +30,10 @@ public class ConferenceController {
     public Optional<Conference> getConferenceById(@PathVariable String id){
         return conferenceService.getConferenceById(id);
     }
-
+    @PutMapping("/update")
+    public Conference updateItem(@RequestBody Conference conference) {
+       return conferenceService.updateConference(conference);
+    }
     @DeleteMapping("/delete/{id}")
     public String deleteConference(@PathVariable String id){
         return conferenceService.deleteConference(id);
