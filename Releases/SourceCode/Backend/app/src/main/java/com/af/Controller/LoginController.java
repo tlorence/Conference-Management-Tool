@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/")
+@RequestMapping("/user/")
 public class LoginController {
 
     private final UserRepository repository;

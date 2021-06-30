@@ -1,26 +1,62 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { userLogin } from "../../services/user";
 import "./Login.css";
+import Swal from "sweetalert2";
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      password: "",
-    };
-  }
+  state = {
+    email: "",
+    password: "",
+  };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  async handleSubmit(event) {
-    event.preventDefault();
 
-    const resUser = await userLogin();
-    localStorage.setItem("user", btoa(resUser.data));
-  }
+
+  //user login
+  submitLogin = (e) => {
+    e.preventDefault();
+    fetch("http://localhost:9900/user/login", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res) {
+          console.log(res.role);
+          localStorage.setItem("user", JSON.stringify(res));
+          if (res.role === "researcher") {
+            window.location = "/researcher/";
+          } else if (res.role === "workshopConductor") {
+            window.location = "/workshopPresenter";
+          } else if (res.role === "admin") {
+            
+            window.location = "/admin";
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Incorrect email or password",
+              text: "Please try again!",
+            });
+          }
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Incorrect email or password",
+            text: "Please try again!",
+          });
+        }
+      })
+      .catch((err) => console.log(err));
+  };
 
   render() {
     return (
@@ -28,7 +64,7 @@ class Login extends Component {
         <div className="col-50">
           <h3 className="h3">Login</h3>
           <div className="containerLogin">
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.submitLogin}>
               <div>
                 <label className="labelLogin">Email</label>
               </div>
@@ -39,7 +75,7 @@ class Login extends Component {
                   name="email"
                   placeholder="Enter email"
                   required
-                  value={this.state.email}
+                  //   value={this.state.email}
                   onChange={this.handleChange}
                 />
               </div>
@@ -53,7 +89,7 @@ class Login extends Component {
                   name="password"
                   placeholder="Enter Password"
                   required
-                  value={this.state.password}
+                  //   value={this.state.password}
                   onChange={this.handleChange}
                 />
               </div>
