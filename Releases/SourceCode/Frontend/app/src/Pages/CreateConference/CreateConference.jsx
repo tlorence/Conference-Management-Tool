@@ -117,7 +117,7 @@ export default class CreateConference extends Component {
         console.groupEnd();
         this.setState({
           inputValue: "",
-          value: [...value, inputValue],
+        value: [...value, inputValue],
         });
         e.preventDefault();
       default:

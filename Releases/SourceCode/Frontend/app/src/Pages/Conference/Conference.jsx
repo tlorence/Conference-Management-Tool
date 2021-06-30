@@ -38,6 +38,7 @@ export default class Conference extends Component {
   render() {
     const { isLoaded, conferences } = this.state;
     return (
+
       <div className="container-fluid">
         <div>
           <h1>Conference Details</h1>
@@ -72,6 +73,7 @@ export default class Conference extends Component {
             </div>
           </div>
         </div>
+
       </div>
     );
   }

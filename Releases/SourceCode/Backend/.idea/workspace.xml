@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="edaa9b6c-0008-4161-886f-e895b480d536" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/af/Service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/af/Service/Impl/UserServiceImpl.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/../Frontend/app/src/Pages/AdminDashboard/AdminDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/app/src/Pages/AdminDashboard/AdminDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/app/src/Pages/Conference/Conference.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/app/src/Pages/Conference/Conference.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/app/src/Pages/CreateConference/CreateConference.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/app/src/Pages/CreateConference/CreateConference.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/app/src/Pages/Resregistration/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/app/src/Pages/Resregistration/Registration.jsx" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +46,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RunManager">
+
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -52,6 +60,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="IcafApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.services.ICAF.IcafApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -77,7 +86,10 @@
       <workItem from="1624641390406" duration="568000" />
       <workItem from="1624642045509" duration="36000" />
       <workItem from="1624676584737" duration="646000" />
+
       <workItem from="1624992766877" duration="1821000" />
+
+      <workItem from="1624982900485" duration="3230000" />
     </task>
     <servers />
   </component>
