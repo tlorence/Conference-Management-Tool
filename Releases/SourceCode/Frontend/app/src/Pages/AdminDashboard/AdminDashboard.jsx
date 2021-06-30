@@ -12,11 +12,10 @@ import { faUserCog } from "@fortawesome/free-solid-svg-icons";
 import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 import { getAllConferernce } from "../../services/conference";
-
+import Conference from "../Conference/Conference";
+import { getResearchpapers } from "../../services/user";
 export default class AdminDashboard extends Component {
   state = {
-    researchPapers: [],
-    conferenceDetails: [],
     adminSideItems: [
       {
         name: "Dashboard",
@@ -80,10 +79,13 @@ export default class AdminDashboard extends Component {
       },
     ],
   };
-  async componentDidMount() {
-    const res = await getAllConferernce();
-    this.setState({ conferenceDetails: res.data });
-  }
+  // async componentDidMount() {
+  //   const resConference = await getAllConferernce();
+  //   this.setState({ conferenceDetails: resConference.data });
+
+  //   // const resResearch = await getResearchpapers();
+  //   // this.setState({ researchPapers: resResearch.data });
+  // }
   render() {
     return (
       <div>
@@ -100,7 +102,7 @@ export default class AdminDashboard extends Component {
               <ResearchPaper />
             </Route>
             <Route path="/admin/conferenceDetails">
-              {/* udin class eka import karala methanata tag eka dpn */}
+              <Conference data={this.state.conferenceDetails} />
             </Route>
             <Route path="/admin/">
               <h1>Dashboard App</h1>

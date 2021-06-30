@@ -19,7 +19,7 @@ const components = {
   DropdownIndicator: null,
 };
 
-const createOption = (label: string) => ({
+const createOption = (label) => ({
   label,
   value: label,
 });
@@ -82,7 +82,7 @@ export default class CreateConference extends Component {
         console.groupEnd();
         this.setState({
           inputValue: "",
-          value: [...value, inputValue],
+        value: [...value, inputValue],
         });
         e.preventDefault();
       default:

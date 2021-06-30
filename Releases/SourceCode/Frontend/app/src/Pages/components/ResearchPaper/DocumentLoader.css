@@ -1,0 +1,8 @@
+.pdfFrame{
+  /* width: ; */
+  /* overflow:hidden; */
+  height: 436px;
+  overflow-x: hidden !important;
+  border-radius: 30px;
+  border:solid 1px;
+}

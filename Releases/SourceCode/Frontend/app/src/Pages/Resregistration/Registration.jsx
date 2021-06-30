@@ -11,11 +11,12 @@ export default class Registration extends Component {
     file: "",
     eduQualification: "",
     expertiseArea: "",
+    paymentStatus: "Pending",
+    approval: "Pending",
   };
   onSubmit = async () => {
     try {
-      debugger;
-      const res = await addUser(this.state);
+      const res = addUser(this.state);
       console.log(res);
     } catch (error) {
       console.log(error);
@@ -38,7 +39,9 @@ export default class Registration extends Component {
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
+  componentDidMount() {
+    var div = (document.getElementById("file-div").style.display = "none");
+  }
   roleUpdate = (e) => {
     console.log();
     var role = document.getElementById("role").value;
