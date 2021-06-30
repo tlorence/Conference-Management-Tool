@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { imagePath } from "../../../services";
 
 export default function Sidebar(props) {
+  const user = localStorage.getItem("user");
+  console.log(user);
   return (
     <div>
       <div class="container-fluid">
@@ -59,7 +61,7 @@ export default function Sidebar(props) {
                     height="30"
                     class="rounded-circle"
                   />
-                  <span class="d-none d-sm-inline mx-1">User</span>
+                  <span class="d-none d-sm-inline mx-1">{user.name}</span>
                 </a>
                 <ul
                   class="dropdown-menu dropdown-menu-dark text-small shadow"
@@ -84,9 +86,19 @@ export default function Sidebar(props) {
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="">
-                      Sign out
-                    </a>
+                    <Link path="/">
+                      <a
+                        class="dropdown-item"
+                        href=""
+                        onClick={() => {
+                          localStorage.setItem("user", "")
+                            window.location = "/";
+                         
+                        }}
+                      >
+                        Sign out
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

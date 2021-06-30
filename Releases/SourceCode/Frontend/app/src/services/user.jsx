@@ -11,5 +11,5 @@ export const getWorkshopProposale = () => {
   return Axios.get(USER+"getProposals/");
 };
 export const userLogin = (user) => {
-  return Axios.get(USER+"login/",user);
+  return Axios.post("user/login",user);
 };
