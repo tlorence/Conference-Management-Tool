@@ -10,3 +10,6 @@ export const getResearchpapers = () => {
 export const getWorkshopProposale = () => {
   return Axios.get(USER+"getProposals/");
 };
+export const userLogin = (user) => {
+  return Axios.get(USER+"login/",user);
+};
